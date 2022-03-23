@@ -20,6 +20,22 @@ ul {
     list-style: none;
 }
 
+/*оформление лого*/
+.logo {
+color: var(--title-text-color);
+text-decoration: none;
+
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+line-height: 1.2;
+letter-spacing: 0.03em;
+}
+
+.logo-blue {
+color: var(--hover-color);
+}
 /*стилизация site-nav */
 .site-nav a {
     color: var(--title-text-color);
@@ -35,12 +51,14 @@ text-decoration: none;
     color: var(--hover-color);
 }
 
-.contact .cont-link:hover,
-.contact .cont-link:focus {
+.contact .contact-link:hover,
+.contact .contact-link:focus {
     color: var(--hover-color);
 }
-.cntact {
-    
+.contact-link {
+color: var(--primary-text-color);
+
+text-decoration: none;
 font-weight: 500;
 font-size: 14px;
 line-height: 1.14;
@@ -118,7 +136,7 @@ letter-spacing: 0.03em;
 
 .address {
 color: var(--title-hero);
-background-color: #2196F3;
+background-color: #2F303A;
 
 font-weight: 400;
 font-size: 14px;
@@ -127,6 +145,7 @@ line-height: 1.7;
 letter-spacing: 0.03em;
 }
 
-.address .contfooter {
+.address-footer {
+    text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
 }

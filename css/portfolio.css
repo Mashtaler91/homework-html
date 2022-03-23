@@ -15,39 +15,110 @@
 .page {
     background-color: var(--title-hero);
     color: var(--primary-text-color);
+    font-family: roboto, sans-serif;
 }
 
 ul {
     list-style: none;
 }
 
+.logo {
+    color: var(--title-text-color);
+    text-decoration: none;
+    
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    }
+    
+    .logo-blue {
+    color: var(--hover-color);
+    }
 /*стилизация site-nav */
 .site-nav a {
     color: var(--title-text-color);
-} 
+    
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.02em;
+text-decoration: none;
+}
 
 .site-nav .link:hover,
 .site-nav .link:focus {
     color: var(--hover-color);
 }
 
-.contact .cont-link:hover,
-.contact .cont-link:focus {
+.contact .contact-link:hover,
+.contact .contact-link:focus {
     color: var(--hover-color);
+}
+
+.contact-link {
+color: var(--primary-text-color);
+
+text-decoration: none;
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.02em;
 }
    
 /*цвет на заголовки и подзаголовки*/
-.section-tittle {
-    color: var(--title-text-color);
+.gallery, .section-tittle {
+color: var(--title-text-color);
+text-decoration: none;
+
+font-weight: 700;
+font-size: 18px;
+line-height: 2;
+letter-spacing: 0.06em;
+}
+
+.section-text {
+color: var(--primary-text-color);
+text-decoration: none;
+
+font-weight: 400;
+font-size: 16px;
+line-height: 1.9;
+letter-spacing: 0.03em;
 }
 
 /*оформление кнопки*/
 .button {
-    color: var(--title-text-color);
-    background-color: var(--button-color);
+color: var(--title-text-color);
+background-color: var(--button-color);
+text-decoration: none;
+
+font-weight: 500;
+font-size: 16px;
+line-height: 1.6;
+letter-spacing: 0.03em;
 }
 
 .button:hover {
-    color: var(--title-hero);
-    background-color: var(--button-color-hover);
+color: var(--title-hero);
+background-color: var(--button-color-hover);
 }
+
+/*оформление подвала*/
+.address {
+color: var(--title-hero);
+background-color: #2F303A;
+    
+font-weight: 400;
+font-size: 14px;
+line-height: 1.7;
+    
+letter-spacing: 0.03em;
+}
+    
+.address-footer {
+text-decoration: none;
+color: rgba(255, 255, 255, 0.6);
+}
+
