@@ -3,12 +3,22 @@
     --title-text-color: #212121;
     --title-hero: #FFFFFF;
     --hover-color: #2196F3;
+    --section-team-color: #F5F4FA;
 }
 
 /* основной цвет текста #757575*/
 /*цвет шрифта в шапке #212121*/
 /*цвет шрифта героя #FFFFFF*/
 /* цвет hover #2196F3*/
+
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
 
 .page {
     background-color: var(--title-hero);
@@ -17,12 +27,36 @@
 }
 
 ul {
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
 
-/*оформление лого*/
+/*контейнер шапки*/
+.conteiner {
+width: 1230px;
+margin-left: auto;
+margin-right: auto;
+padding-left: 15px;
+padding-right: 15px;
+outline: 2px solid tomato;   
+}
+
+/*оформлення лого*/
 .logo {
 color: var(--title-text-color);
+text-decoration: none;
+
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+line-height: 1.2;
+letter-spacing: 0.03em;
+}
+
+.logo-footer{
+color: var(--title-hero);
 text-decoration: none;
 
 font-family: 'Raleway';
@@ -36,9 +70,29 @@ letter-spacing: 0.03em;
 .logo-blue {
 color: var(--hover-color);
 }
-/*стилизация site-nav */
-.site-nav a {
-    color: var(--title-text-color);
+
+/*стилізація шапки site-nav */
+.main-nav {
+display: flex; /*вся шапка стає горизонтальною */
+align-items: center;
+}
+
+.site-nav {
+display: flex;
+margin-left: 93px;
+}
+
+/*добавляю відступи між кнопками крім крайньої правої*/
+.site-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.site-nav .link {
+padding-top: 32px;
+padding-bottom: 32px;
+display: block;
+
+color: var(--title-text-color);
     
 font-size: 14px;
 line-height: 1.14;
@@ -51,11 +105,16 @@ text-decoration: none;
     color: var(--hover-color);
 }
 
+/*стилізація контактів в шапці*/
 .contact .contact-link:hover,
 .contact .contact-link:focus {
     color: var(--hover-color);
 }
+
 .contact-link {
+padding-top: 32px;
+padding-bottom: 32px;
+
 color: var(--primary-text-color);
 
 text-decoration: none;
@@ -64,19 +123,35 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
 }
+
+.contact {
+display: flex;
+margin-left: auto; /*прижимає флекс-бокс максимально вправо*/
+}
+
+/*відступ між елементами за допомогою виключення попереднбого селектора*/
+.contact .item + .item {
+margin-left: 50px;
+}
    
 /*цвет основного заголовка*/
+.hero-tittle {
+    text-align: center;
+} 
+
 .hero {
     color: var(--title-hero);
     background-color: tomato;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-/* or 136% */
 
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    margin-top: 0;
+    margin-bottom: 40px;
 }
 
 
@@ -85,9 +160,29 @@ letter-spacing: 0.02em;
     color: var(--title-hero);
     background-color: var(--hover-color);
     text-decoration: none;
+    border-radius: 4px;
+    padding: 10px 32px;
+    display: inline-block;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--hover-color); 
 }
 
+.button-hero:hover {
+    color: var(--button-color-hover);
+    background-color: var(--section-team-color);
+    }
+
 /*оформление заголовки и подзаголовки*/
+.section-conteiner {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/*оформлення секції benefits */
+.benefits-list {
+display: flex;
+}
+
 .section-tittle-three {
     color: var(--title-text-color);
 
@@ -95,8 +190,25 @@ font-weight: 700;
 font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.03em;
+margin-top: 0;
+margin-bottom: 10px;
 }
 
+/*оформление текста*/
+.text {
+    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    margin-top: 0;
+    }
+
+.conteiner-color {
+    background-color: var(--section-team-color);
+}
+
+/*оформление секции портфолио*/
 .section-tittle-two {
     color: var(--title-text-color);
     
@@ -105,6 +217,12 @@ letter-spacing: 0.03em;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.conteiner-position {
+    padding-bottom: 94px;
 }
 
 .section-tittle {
@@ -114,16 +232,11 @@ font-weight: 500;
 font-size: 16px;
 line-height: 1.18;
 letter-spacing: 0.03em;
+margin-top: 0;
+margin-bottom: 10px;
 }
 
-/*оформление текста*/
-.text {
-    
-font-weight: 400;
-font-size: 14px;
-line-height: 1.7;
-letter-spacing: 0.03em;
-}
+
 
 .team {
     
@@ -132,12 +245,24 @@ font-size: 16px;
 line-height: 1.18;
 text-align: center;
 letter-spacing: 0.03em;
+margin-top: 0;
+}
+
+.team-position {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    background-color: #FFFFFF;
+}
+
+.footer-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #2F303A;
 }
 
 .address {
 color: var(--title-hero);
-background-color: #2F303A;
-
 font-weight: 400;
 font-size: 14px;
 line-height: 1.7;

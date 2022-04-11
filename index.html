@@ -9,36 +9,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css" /> 
 </head>
 <body class="page">
-    <header class="page-header">
-        <nav>
+    <header>
+        <nav class="conteiner main-nav">
             <a href="/" aria-label="logo" class="logo">
                 <span class="logo-blue">Web</span>Sudio
             </a>
             <ul class="site-nav">
-                <li><a href="" class="link">студия</a></li>
-                <li><a href="./portfolio.html" class="link">портфолио</a></li>
-                <li><a href="" class="link">контакты</a></li>
+                <li class="item"><a href="" class="link">студия</a></li>
+                <li class="item"><a href="./portfolio.html" class="link">портфолио</a></li>
+                <li class="item"><a href="" class="link">контакты</a></li>
             </ul>
 
             <ul class="contact">
-                <li><a href="" class="contact-link">info@devstudio.com</a></li>
-                <li><a href="" class="contact-link">+38 096 111 11 11</a></li>
+                <li class="item"><a href="" class="contact-link">info@devstudio.com</a></li>
+                <li class="item"><a href="" class="contact-link">+38 096 111 11 11</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div>
-            <section>
+            <section class="hero-tittle">
                 <h1 class="hero">Эффективные решения<br> для вашего бизнеса</h1>
                 <a href="" class="button-hero">заказать услугу</a>
             </section>
         </div>
 
-        <section>
-            <ul>
+        <section class="section-conteiner">
+            <div class="conteiner">
+            <ul class="benefits-list">
                 <li>
                     <h3 class="section-tittle-three">ВНИМАННИЕ К ДЕТАЛЯМ</h3>
                     <p class="text">
@@ -64,60 +66,66 @@
                     </p>
                 </li>
             </ul>
+            </div>
         </section>
 
-        <section>
-            <h2 class="section-tittle-two">Чем мы занимаемся</h2>
-            <ul>
-                <li>
+        <section class="conteiner-position">
+            <div class="conteiner">
+                <h2 class="section-tittle-two">Чем мы занимаемся</h2>
+                <ul>
+                   <li>
                     <img src="./images/img.svg" alt="" width="370">
-                </li>
-                <li>
+                   </li>
+                   <li>
                     <img src="./images/img2.svg" alt="" width="370">
-                </li>
-                <li>
+                   </li>
+                   <li>
                     <img src="./images/img3.svg" alt="" width="370">
-                </li>
-
-            </ul>
+                   </li>
+                </ul>
+            </div>
         </section>
 
         <section>
-            <h2 class="section-tittle-two">Наша команда</h2>
+            <div class="conteiner conteiner-color section-conteiner">
+                <h2 class="section-tittle-two">Наша команда</h2>
             <ul>
-                <li>
+                <li class="team-position">
                     <img src="./images/img1.0.png" alt="" width="270">
                     <h3 class="section-tittle">Игорь Демьяненко</h3>
                     <span class="team">Product Designer</span>
                 </li>
-                <li>
+                <li class="team-position">
                     <img src="./images/img2.0.png" alt="" width="270">
                     <h3 class="section-tittle">Ольга Репина</h3>
                     <span class="team">Frontend Developer</span>
                 </li>
-                <li>
+                <li class="team-position">
                     <img src="./images/img3.0.png" alt="" width="270">
                     <h3 class="section-tittle">Николай Тарасов</h3>
                     <span class="team">Marketing</span>
                 </li>
-                <li>
+                <li class="team-position">
                     <img src="./images/img4.0.png" alt="" width="270">
                     <h3 class="section-tittle">Михаил Ермаков</h3>
                     <span class="team">UI Designer</span>
                 </li>
             </ul>
+            </div>
         </section>
     </main>
-    <footer>
-        <a href="/" aria-label="logo">
-            <img src="./images/logo_footer.png" alt="">
-        </a>
-
-        <address class="address">
-            г.Киев, пр-т Леси Украинки, 26
-            <a href="" class="address-footer">info@example.com</a>
-            <a href="" class="address-footer">+38 096 111 11 11</a>
-        </address>
+    <footer class="footer-padding conteiner">
+        <div>
+            <a href="/" aria-label="logo" class="logo-footer">
+                <span class="logo-blue">Web</span>Sudio
+            </a>
+    
+            <address class="address">
+                г.Киев, пр-т Леси Украинки, 26
+                <a href="" class="address-footer">info@example.com</a>
+                <a href="" class="address-footer">+38 096 111 11 11</a>
+            </address>
+        </div>
     </footer>
 </body>
 
