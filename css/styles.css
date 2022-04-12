@@ -1,4 +1,5 @@
 :root {
+    --back-gackground-body: #E5E5E5;
     --primary-text-color: #757575;
     --title-text-color: #212121;
     --title-hero: #FFFFFF;
@@ -34,12 +35,12 @@ ul {
 
 /*контейнер шапки*/
 .conteiner {
-width: 1230px;
+width: 1200px;
 margin-left: auto;
 margin-right: auto;
 padding-left: 15px;
 padding-right: 15px;
-outline: 2px solid tomato;   
+/*outline: 2px solid tomato;   */
 }
 
 /*оформлення лого*/
@@ -75,11 +76,16 @@ color: var(--hover-color);
 .main-nav {
 display: flex; /*вся шапка стає горизонтальною */
 align-items: center;
+border-bottom: 1px solid #ECECEC;
+
+padding-left: auto;
 }
 
 .site-nav {
 display: flex;
 margin-left: 93px;
+margin-top: 0;
+margin-bottom: 0;
 }
 
 /*добавляю відступи між кнопками крім крайньої правої*/
@@ -181,6 +187,18 @@ margin-left: 50px;
 /*оформлення секції benefits */
 .benefits-list {
 display: flex;
+flex-wrap: wrap;
+}
+
+/*даємо розміри блоку та відступи між блоками */
+.benefits {
+width: calc((100% - 90px) / 4);
+margin-right: 30px;
+}
+
+/*забираємо маржен в 4го елемента */
+.benefits:nth-child(4n) {
+margin-right: 0;
 }
 
 .section-tittle-three {
@@ -196,7 +214,7 @@ margin-bottom: 10px;
 
 /*оформление текста*/
 .text {
-    
+ 
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
@@ -209,6 +227,20 @@ margin-bottom: 10px;
 }
 
 /*оформление секции портфолио*/
+.conteiner-position {
+padding-bottom: 94px;
+}
+
+.worklist-flex {
+display: flex;
+justify-content: space-between;
+}
+
+/*.worklist-flex .img-position:not(:last-child) {
+width: calc((100% - 60px) / 3);
+margin-right: 30px;
+}*/
+
 .section-tittle-two {
     color: var(--title-text-color);
     
@@ -221,25 +253,40 @@ margin-bottom: 10px;
     margin-bottom: 50px;
 }
 
-.conteiner-position {
-    padding-bottom: 94px;
+/*оформление секції команда*/
+.flex-team {
+display: flex;
+justify-content: space-between;
+}
+
+.team-position {
+    
+width: 270px;
+height: 368px;
+    
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
+    
+text-align: center;
+background-color: #FFFFFF;
 }
 
 .section-tittle {
-    color: var(--title-text-color);
+margin-top: 30px;
+margin-bottom: 10px;
+
+color: var(--title-text-color);
 
 font-weight: 500;
 font-size: 16px;
 line-height: 1.18;
 letter-spacing: 0.03em;
-margin-top: 0;
-margin-bottom: 10px;
+
 }
 
 
 
 .team {
-    
 font-weight: 400;
 font-size: 16px;
 line-height: 1.18;
@@ -248,13 +295,8 @@ letter-spacing: 0.03em;
 margin-top: 0;
 }
 
-.team-position {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
 
-    background-color: #FFFFFF;
-}
-
+/*оформленя підвалу*/
 .footer-padding {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -262,6 +304,11 @@ margin-top: 0;
 }
 
 .address {
+display: flex;
+flex-direction: column;
+
+margin-top: 20px;
+
 color: var(--title-hero);
 font-weight: 400;
 font-size: 14px;
