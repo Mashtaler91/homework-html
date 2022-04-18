@@ -1,4 +1,5 @@
 :root {
+    --background-color: #2F303A;
     --back-gackground-body: #E5E5E5;
     --primary-text-color: #757575;
     --title-text-color: #212121;
@@ -139,20 +140,35 @@ margin-left: auto; /*прижимає флекс-бокс максимально
 .contact .item + .item {
 margin-left: 50px;
 }
+
+/*добавляю іконки до контактів*/
+
    
-/*цвет основного заголовка*/
+/*оформлення бекграунда*/
+.hero-background {
+    max-width: 1600px; /*задаэмо фіксовану ширину*/
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 200px;
+
+    background-image: linear-gradient( to right, rgba(47, 48, 58, 0.8), 
+    rgba(47, 48, 58, 0.4)), url('/images/IMGbg_7336.jpg');
+    /*background-size: cover;*/
+    background-color: var(--background-color);
+    background-position: 40% 50%;
+}
+
+/*оформлення героя*/
 .hero-tittle {
     text-align: center;
 } 
 
 .hero {
     color: var(--title-hero);
-    background-color: tomato;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
@@ -191,6 +207,41 @@ flex-wrap: wrap;
 }
 
 /*даємо розміри блоку та відступи між блоками */
+
+/*за допомогою псевдоелемента добавляємо карточку 
+з іконкою svg */
+.benefits::before {
+    content: ''; /*обовязково добавляємо це значення*/
+
+    display: inline-block; /*по дефолту псевдоелементи є строчні, робимо з них блок*/
+    width: 270px; /*задаємо ширину і висоту карточки*/
+    height: 120px;
+    border-radius: 4px; /*закруглюєм краї*/
+    background-color: var(--section-team-color);
+    margin-bottom: 30px;
+
+    background-repeat: no-repeat; /*щоб не повторювалась */
+    background-position: 100px 25px;
+}
+
+/*в кожну карточку добавляєм свою іконку для цього потрібно тегам
+присвоїти класи де мають бути іконки */
+.icon-group::before {
+background-image: url('../images/Group.svg'); /*добавляємо іконку у форматі svg */ /*позиціонуємо ширина висота*/
+}
+
+.icon-clock::before {
+    background-image: url('../images/clock\ 1.svg'); /*добавляємо іконку у форматі svg */
+}
+
+.icon-diagram::before {
+    background-image: url('../images/diagram\ 1.svg'); /*добавляємо іконку у форматі svg */
+}
+
+.icon-astronaut::before {
+    background-image: url('../images/astronaut\ 1.svg'); /*добавляємо іконку у форматі svg */
+}
+
 .benefits {
 width: calc((100% - 90px) / 4);
 margin-right: 30px;
@@ -220,6 +271,7 @@ margin-bottom: 10px;
     line-height: 1.7;
     letter-spacing: 0.03em;
     margin-top: 0;
+    margin-bottom: 0;
     }
 
 .conteiner-color {
