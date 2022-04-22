@@ -229,26 +229,84 @@ letter-spacing: 0.03em;
 
 /*оформление подвала*/
 .footer-padding {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    display: flex;
+
     background-color: #2F303A;
+}
+
+.block-address {
+    margin-right: 70px;
+    margin-top: 60px;
+    margin-bottom: 0px;
 }
 
 .address {
 display: flex;
 flex-direction: column;
-    
 margin-top: 20px;
 
 color: var(--title-hero);
 font-weight: 400;
 font-size: 14px;
 line-height: 1.7;
+
 letter-spacing: 0.03em;
 }
-    
+
 .address-footer {
-text-decoration: none;
-color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/*оформленя блоку соцмережі*/
+.network-block {
+    margin-top: 72px;
+    margin-bottom: 80px;
+}
+
+.footer-network {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2px;
+    letter-spacing: 0.03em;
+    color: var(--title-hero);
+}
+
+.icon-block {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+
+.icon-network{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    margin-right: 10px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-network:hover {
+    background-color: var(--hover-color);
+}
+
+.footer-inst{
+    background-image: url("../icon/instagram-footer.svg");
+}
+
+.footer-twit {
+    background-image: url("../icon/twitter-footer\ 1.svg");
+}
+
+.footer-fb {
+    background-image: url("../icon/facebook-footer.svg");
+}
+
+.footer-linc {
+    background-image: url("../icon/linkedin-footer\ 1.svg");
 }
 

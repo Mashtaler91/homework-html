@@ -6,6 +6,7 @@
     --title-hero: #FFFFFF;
     --hover-color: #2196F3;
     --section-team-color: #F5F4FA;
+    --border-color: #AFB1B8;
 }
 
 /* основной цвет текста #757575*/
@@ -370,67 +371,95 @@ margin-top: 0;
 }
 
 /*іконки соцсіті*/
-.networksoc {
+.network {
     display: inline-flex;
     justify-content: space-around;
     margin-top: 16px;
 }
 
-.icon-insta {
+.icon-static {
     display: flex;
     width: 44px;
     height: 44px;
     margin-right: 10px;
-    
 
-    background-image: url("../icon/instagram\ 2.svg");
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.icon-insta {
+    background-image: url("../icon/instagram\ 2.svg");
 }
 
 .icon-twit {
-    display: flex;
-    width: 44px;
-    height: 44px;
-    margin-right: 10px;
-
     background-image: url("../icon/twitter\ 1.svg");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .icon-fb {
-    display: flex;
-    width: 44px;
-    height: 44px;
-    margin-right: 10px;
-
     background-image: url("../icon/facebook\ 1.svg");
+}
+
+.icon-linkin {
+    background-image: url("../icon/linkedin\ 1.svg");
+    margin-right: 0;
+}
+
+/*оформленя блоку "постійні клієнти"*/
+.client {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-defolt {
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.icon-linkin {
-    display: flex;
-    width: 44px;
-    height: 44px;
+.icon-cliet1 {
+    background-image: url("../icon/group.svg");
+}
 
-    background-image: url("../icon/linkedin\ 1.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+.icon-cliet2 { 
+    background-image: url("../icon/group\ \(1\).svg");
+}
+
+.icon-cliet3 {
+    background-image: url("../icon/group\ \(2\).svg");
+}
+
+.icon-cliet4 {
+    background-image: url("../icon/group\ \(3\).svg");
+}
+
+.icon-cliet5 {
+    background-image: url("../icon/group\ \(4\).svg");
+}
+
+.icon-cliet6 {
+    background-image: url("../icon/group\ \(5\).svg");
 }
 
 /*оформленя підвалу*/
 .footer-padding {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    display: flex;
+
     background-color: #2F303A;
+}
+
+.block-address {
+    margin-right: 70px;
+    margin-top: 60px;
+    margin-bottom: 50px;
 }
 
 .address {
 display: flex;
 flex-direction: column;
-
 margin-top: 20px;
 
 color: var(--title-hero);
@@ -444,4 +473,56 @@ letter-spacing: 0.03em;
 .address-footer {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
+}
+
+/*оформленя блоку соцмережі*/
+.network-block {
+    margin-top: 72px;
+    margin-bottom: 80px;
+}
+
+.footer-network {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2px;
+    letter-spacing: 0.03em;
+    color: var(--title-hero);
+}
+
+.icon-block {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+
+.icon-network{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    margin-right: 10px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-network:hover {
+    background-color: var(--hover-color);
+}
+
+.footer-inst{
+    background-image: url("../icon/instagram-footer.svg");
+}
+
+.footer-twit {
+    background-image: url("../icon/twitter-footer\ 1.svg");
+}
+
+.footer-fb {
+    background-image: url("../icon/facebook-footer.svg");
+}
+
+.footer-linc {
+    background-image: url("../icon/linkedin-footer\ 1.svg");
 }
