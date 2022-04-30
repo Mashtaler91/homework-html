@@ -382,26 +382,28 @@ margin-top: 0;
     width: 44px;
     height: 44px;
     margin-right: 10px;
-
-    background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 50px;
+    
 }
 
-.icon-insta {
-    background-image: url("../icon/instagram\ 2.svg");
-}
-
-.icon-twit {
-    background-image: url("../icon/twitter\ 1.svg");
-}
-
-.icon-fb {
-    background-image: url("../icon/facebook\ 1.svg");
-}
-
-.icon-linkin {
-    background-image: url("../icon/linkedin\ 1.svg");
+.no-margin {
     margin-right: 0;
+}
+
+.icon-svg {
+    fill: #afb1b8;
+    width: 20px;
+    height: 20px;
+    margin: 12px 12px;
+}
+
+.icon-static:hover {
+    background-color: #2196F3;
+    
+}
+
+.icon-svg:hover {
+    fill: #FFFFFF;
 }
 
 /*оформленя блоку "постійні клієнти"*/
@@ -410,38 +412,17 @@ margin-top: 0;
     justify-content: space-between;
 }
 
-.icon-defolt {
-    width: 170px;
-    height: 92px;
+.icon-defolt1 {
     border: 1px solid var(--border-color);
     border-radius: 4px;
-
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 170px;
+    height: 92px;
+    fill: var(--border-color);
 }
 
-.icon-cliet1 {
-    background-image: url("../icon/group.svg");
-}
-
-.icon-cliet2 { 
-    background-image: url("../icon/group\ \(1\).svg");
-}
-
-.icon-cliet3 {
-    background-image: url("../icon/group\ \(2\).svg");
-}
-
-.icon-cliet4 {
-    background-image: url("../icon/group\ \(3\).svg");
-}
-
-.icon-cliet5 {
-    background-image: url("../icon/group\ \(4\).svg");
-}
-
-.icon-cliet6 {
-    background-image: url("../icon/group\ \(5\).svg");
+.icon-defolt1:hover {
+    fill: #2196F3;
+    border-color: #2196F3;
 }
 
 /*оформленя підвалу*/
