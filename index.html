@@ -42,7 +42,8 @@
             <section class="hero-background">
                 <div class="hero-tittle">
                     <h1 class="hero">Эффективные решения<br> для вашего бизнеса</h1>
-                <a href="" class="button-hero" data-modal-open>заказать услугу</a>
+                <button class="button-hero" data-open-modal>заказать услугу</button>    
+                
                 </div>
             </section>
 
@@ -284,29 +285,14 @@
         </div>
 
     </footer>
-
-    <div class="backdrob is-hiden" data-modal>
+<!--модалка-->
+    <div class="backdrob is-hidden" data-backdrop>
         <div class="modal">
-            <button class="drop-window cross" data-modal-close></button>
+            <button class="drop-window cross" data-close-modal></button>
         </div>
     </div>
 
-    <script>
-        (() => {
-  const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
-  };
-
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-
-  function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
-  }
-})();
-    </script>
+    <script src="./modal.js"></script>
 </body>
 
 </html>

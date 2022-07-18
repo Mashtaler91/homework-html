@@ -216,7 +216,8 @@ margin-left: 30px;
     padding: 10px 32px;
     display: inline-block;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border: 1px solid var(--hover-color); 
+    border: 1px solid var(--hover-color);
+    cursor: pointer; 
 }
 
 .button-hero:hover {
@@ -512,6 +513,13 @@ letter-spacing: 0.03em;
     background-image: url("../icon/linkedin-footer\ 1.svg");
 }
 
+.open {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
 /*модалка*/
 .backdrob {
     position: fixed;
@@ -522,7 +530,7 @@ letter-spacing: 0.03em;
     background-color: rgba(0, 0, 0, 0.2);;
 }
 
-.is-hiden {
+.is-hidden {
     opacity: 0;
     pointer-events: none;
 }
@@ -553,6 +561,7 @@ letter-spacing: 0.03em;
     border-radius: 50%;
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 
 }
 
