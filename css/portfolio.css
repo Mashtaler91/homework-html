@@ -105,42 +105,47 @@ margin-right: 50px;
     margin-left: auto; /*прижимає флекс-бокс максимально вправо*/
     }
         
-        /*відступ між елементами за допомогою виключення попереднбого селектора*/
+/*відступ між елементами за допомогою виключення попереднбого селектора*/
 .contact .item + .item {
     margin-left: 30px;
+    }
+
+
+/*підкреслювання під навігацією*/
+.line {
+    position: relative;
+    }
+    
+.line::after {
+    content: '';
+    position: absolute;
+       
+    
+    bottom: -2px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--hover-color);
+    border-radius: 2px;
+    
+    opacity: 0;
+    }
+    
+    .line:hover::after {
+        opacity: 1;
     }
 
 .site-nav .link:hover,
 .site-nav .link:focus {
     color: var(--hover-color);
-}
-
-.contact .contact-link:hover,
-.contact .contact-link:focus {
-    color: var(--hover-color);
-}
-
-.contact-link {
-padding-top: 32px;
-padding-bottom: 32px;
-
-color: var(--primary-text-color);
-
-text-decoration: none;
-font-weight: 500;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.02em;
-}
+    }
 
 .section-conteiner {
     padding-top: 94px;
     padding-bottom: 94px;
     }
 
-/*оформлення кнопок меню*/
-
-/*test*/
+    
+/*оформлення контактів з ховером*/
 .icon-defolt-mail {
     padding: 0;
     width: 161px;
@@ -161,6 +166,7 @@ letter-spacing: 0.02em;
     fill: #2196F3;
 }
 
+/*оформлення кнопок меню*/
 .site-button {
     display: flex;
     justify-content: center;
@@ -211,6 +217,8 @@ margin-bottom: 30px;
     margin-bottom: 30px;
     
     border: 1px solid var(--border-decoration);
+
+    cursor: pointer;
 }
 
 .border-decoration:nth-child(3n) {
@@ -253,7 +261,53 @@ line-height: 1.9;
 letter-spacing: 0.03em;
 }
 
+/*ховер з текстом і прозорим фоном на карточках*/
+.product-thumb {
+    position: relative;
+}
 
+.product-actions {
+    position: absolute;
+
+    color: var(--title-hero);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.7;
+
+    padding-top: 63px;
+    padding-bottom: 170px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    margin-top: 0%;
+    margin-bottom: 0%;
+    top: 0%;
+    left: 0%;
+
+    opacity: 0;
+}
+
+.product-thumb::before {
+    content: '';
+
+    position: absolute;
+    display: inline-block;
+
+    width: 372px;
+    height: 294px;
+
+    background-color: rgba(33, 150, 243, 0.9);
+
+    opacity: 0;
+}
+
+.product-thumb:hover::before {
+    opacity: 1;
+}
+
+.product-actions:hover {
+    opacity: 1;
+}
 
 /*оформление подвала*/
 .footer-padding {
@@ -338,3 +392,54 @@ letter-spacing: 0.03em;
     background-image: url("../icon/linkedin-footer\ 1.svg");
 }
 
+/*модалка*/
+.backdrob {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);;
+}
+
+.is-hiden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 528px;
+    height: 581px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transform: translate(-50%, -50%);
+}
+
+.drop-window {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+
+    top:8px;
+    right: 8px;
+
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.cross {
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-image: url("../images-portfolio/Vector.svg");
+}

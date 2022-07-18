@@ -119,19 +119,6 @@ text-decoration: none;
     color: var(--hover-color);
 }
 
-.contact-link {
-padding-top: 32px;
-padding-bottom: 32px;
-
-color: var(--primary-text-color);
-
-text-decoration: none;
-font-weight: 500;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.02em;
-}
-
 .contact {
 display: inline-flex;
 margin-left: auto; /*прижимає флекс-бокс максимально вправо*/
@@ -140,34 +127,51 @@ align-items: center;
 
 /*відступ між елементами за допомогою виключення попереднбого селектора*/
 .contact .item + .item {
-margin-left: 50px;
+margin-left: 30px;
 }
 
-/*добавляю іконки до контактів, не можу позицыонувати
-правильно іконки*/
-.icon-envelope::before {
+/*підкреслювання під навігацією*/
+.line {
+    position: relative;
+}
+
+.line::after {
     content: '';
+    position: absolute;
+   
 
-    margin-right: 10px;
-    display: inline-flex;
-    width: 16px;
-    height: 12px;
+    bottom: -2px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--hover-color);
+    border-radius: 2px;
 
-    background-image: url("../icon/envelope.svg");
-    background-repeat: no-repeat;
-}  
+    opacity: 0;
+}
 
-.icon-smartphone::before {
-    content: '';
+.line:hover::after {
+    opacity: 1;
+}
 
-    margin-right: 10px;
-    display: inline-flex;
-    width: 10px;
+/*оформлення контактів з ховером*/
+.icon-defolt-mail {
+    padding: 0;
+    width: 161px;
     height: 16px;
 
-    background-image: url("../icon/smartphone.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+    fill: var(--primary-text-color);
+}
+
+.icon-defolt-tel {
+    padding: 0%;
+    width: 142px;
+    height: 16px;
+
+    fill: var(--primary-text-color);
+}
+
+.hover-contact:hover {
+    fill: #2196F3;
 }
    
 /*оформлення бекграунда*/
@@ -506,4 +510,56 @@ letter-spacing: 0.03em;
 
 .footer-linc {
     background-image: url("../icon/linkedin-footer\ 1.svg");
+}
+
+/*модалка*/
+.backdrob {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);;
+}
+
+.is-hiden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 528px;
+    height: 581px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transform: translate(-50%, -50%);
+}
+
+.drop-window {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+
+    top:8px;
+    right: 8px;
+
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.cross {
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-image: url("../images-portfolio/Vector.svg");
 }
